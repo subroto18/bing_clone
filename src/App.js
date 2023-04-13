@@ -2,7 +2,6 @@
 import { Fragment } from 'react';
 import createGenerateClassName, { JssProvider } from 'react-jss';
 import Router from "../src/routers/Router";
-console.log(createGenerateClassName);
 
 const generateClassName = createGenerateClassName()
 
