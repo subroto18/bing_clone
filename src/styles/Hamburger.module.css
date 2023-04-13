@@ -1,0 +1,25 @@
+.appbar {
+  background-color: transparent !important;
+  box-shadow: unset !important;
+}
+
+.logo {
+  width: auto !important;
+  height: 20px !important;
+  margin-top: -6px;
+}
+.siteLinks {
+  padding: 16px;
+}
+.link {
+  font-size: 12px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 12px;
+  margin-top: 10px;
+}

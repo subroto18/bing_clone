@@ -1,0 +1,15 @@
+.searchBox {
+  width: 60% !important;
+  border-radius: 20px !important;
+}
+.searchArea {
+  margin-top: 5rem;
+}
+.searchIconBtnBox {
+  padding-right: 25px;
+}
+
+.searchIconBtn {
+  padding-right: 0px !important;
+  padding-left: 7px !important;
+}

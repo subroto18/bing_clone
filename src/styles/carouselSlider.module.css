@@ -1,0 +1,25 @@
+.sliderCardImage {
+  height: 110px !important;
+}
+.slider {
+  position: relative !important;
+  margin-top: 18rem;
+}
+
+.sliderLeftArrow {
+  position: absolute;
+  left: -44px;
+  top: 96px;
+}
+
+.nextArrow {
+  position: absolute;
+  left: -44px;
+  top: 96px;
+}
+
+.sliderRightArrow {
+  position: absolute;
+  right: -50px;
+  top: 97px;
+}
