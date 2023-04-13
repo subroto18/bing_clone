@@ -1,6 +1,7 @@
 .searchBox {
   width: 50% !important;
-  border-radius: 20px !important;
+  border-radius: 25px !important;
+  padding: 6px !important;
 }
 
 .searchArea {

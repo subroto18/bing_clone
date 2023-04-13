@@ -120,3 +120,6 @@ a:active {
   width: 1.3em !important;
   height: 1.3em !important;
 }
+.css-156df9n-MuiPaper-root {
+  box-shadow: unset !important;
+}
