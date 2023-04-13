@@ -31,11 +31,8 @@ function Hamburger() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [screenWidth,setScreenWidth] = React.useState(null);
-  const [menuLeftPosition,setMenuLeftPosition] = React.useState(1104);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -54,6 +51,8 @@ function Hamburger() {
     }
   };
 
+  // dynamic menu postion based on screen size
+
   React.useEffect(()=>{
     window.addEventListener('resize', ()=>{
       setScreenWidth(window.innerWidth);
@@ -65,12 +64,11 @@ function Hamburger() {
       setScreenWidth(window.innerWidth);
     });
     return () => window.removeEventListener('resize', ()=>{
-      setScreenWidth(window.innerWidth);
+      setScreenWidth(null);
     });
   })
 
   
-  console.log(screenWidth-300);
 
   return (
     <AppBar className={styles.appbar} position="static">
@@ -164,10 +162,7 @@ function Hamburger() {
               sx={{ mt: "45px" }}
               
               keepMounted
-              // transformOrigin={{
-              //   vertical: "top",
-              //   horizontal: "right",
-              // }}
+    
               getContentAnchorEl={null}
               anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
               transformOrigin={{ vertical: "top", horizontal: "right" }}
