@@ -30,7 +30,7 @@ const toggleMenu = [
 function Hamburger() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [screenWidth,setScreenWidth] = React.useState(null);
+
 
 
   const handleOpenUserMenu = (event) => {
@@ -51,25 +51,8 @@ function Hamburger() {
     }
   };
 
-  // dynamic menu postion based on screen size
-
-  React.useEffect(()=>{
-    window.addEventListener('resize', ()=>{
-      setScreenWidth(window.innerWidth);
-    });
-  },[])
-
-  React.useEffect(()=>{
-    window.addEventListener('resize', ()=>{
-      setScreenWidth(window.innerWidth);
-    });
-    return () => window.removeEventListener('resize', ()=>{
-      setScreenWidth(null);
-    });
-  })
 
   
-
   return (
     <AppBar className={styles.appbar} position="static">
       <Container maxWidth="xl">
@@ -160,9 +143,7 @@ function Hamburger() {
 
             <Menu
               sx={{ mt: "45px" }}
-              
               keepMounted
-    
               getContentAnchorEl={null}
               anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
               transformOrigin={{ vertical: "top", horizontal: "right" }}
