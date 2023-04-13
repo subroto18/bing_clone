@@ -96,3 +96,27 @@ a:active {
 .MuiInputBase-root.MuiInputBase-colorPrimary.css-piqts5-MuiInputBase-root {
   padding: 0 15px !important;
 }
+
+.MuiListItemIcon-root.css-cveggr-MuiListItemIcon-root {
+  margin-bottom: -8px;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  width: 0.8em !important;
+  height: 0.8em !important;
+}
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root::before {
+  background-color: unset !important;
+}
+.css-9sgtv1-MuiPaper-root-MuiAccordion-root::before {
+  background-color: unset !important;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  margin-right: -19px;
+  margin-top: 2px;
+}
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.userSiginIcon.css-i4bv87-MuiSvgIcon-root {
+  width: 1.3em !important;
+  height: 1.3em !important;
+}

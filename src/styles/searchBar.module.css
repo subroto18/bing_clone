@@ -1,7 +1,8 @@
 .searchBox {
-  width: 60% !important;
+  width: 50% !important;
   border-radius: 20px !important;
 }
+
 .searchArea {
   margin-top: 5rem;
 }
@@ -12,4 +13,38 @@
 .searchIconBtn {
   padding-right: 0px !important;
   padding-left: 7px !important;
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .searchBox {
+    width: 70% !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 575px) {
+  .searchBox {
+    width: 80% !important;
+  }
+}
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .searchBox {
+    width: 80% !important;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 319px) {
+  .searchBox {
+    width: 80% !important;
+  }
 }

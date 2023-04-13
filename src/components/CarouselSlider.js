@@ -17,7 +17,7 @@ class CarouselSlider extends React.Component {
     };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-    this.redirectToLink = this.redirectToLink.bind(this)
+    this.redirectToLink = this.redirectToLink.bind(this);
   }
 
   next() {
@@ -28,33 +28,34 @@ class CarouselSlider extends React.Component {
     this.slider.slickPrev();
   }
 
-  redirectToLink(link){
-    window.location.replace(link)
+  redirectToLink(link) {
+    window.location.replace(link);
   }
 
   render() {
     const card = data.map((item) => {
       return (
-        
-          <Card key={item.title} onClick={()=>this.redirectToLink(item.url)}   className="slider-card">
+        <Card
+          key={item.title}
+          onClick={() => this.redirectToLink(item.url)}
+          className="slider-card"
+        >
           <CardHeader
-          className="sliderCardTitle"
-          titleTypographyProps={{ variant: "p" }}
-          title={
-            item.title.length > 20
-              ? item.title.substring(0, 20) + "..."
-              : item.title
-          }
-        />
-        <CardMedia
-          className={styles.sliderCardImage}
-          component="img"
-          image={item.thumbnailUrl}
-          alt={item.title}
-        />
-      </Card>
-
-       
+            className="sliderCardTitle"
+            titleTypographyProps={{ variant: "p" }}
+            title={
+              item.title.length > 20
+                ? item.title.substring(0, 20) + "..."
+                : item.title
+            }
+          />
+          <CardMedia
+            className={styles.sliderCardImage}
+            component="img"
+            image={item.thumbnailUrl}
+            alt={item.title}
+          />
+        </Card>
       );
     });
 
@@ -103,7 +104,6 @@ class CarouselSlider extends React.Component {
             initialSlide: 1,
           },
         },
-    
 
         {
           breakpoint: 480,
@@ -117,9 +117,8 @@ class CarouselSlider extends React.Component {
 
     return (
       <Fragment>
-             <Box className={styles.slider}>
-
-                {/* <Button className={styles.sliderLeftArrow} onClick={this.previous}>
+        <Box className={styles.slider}>
+          {/* <Button className={styles.sliderLeftArrow} onClick={this.previous}>
                     <ArrowBackIosIcon />
                 </Button>
 
@@ -127,13 +126,11 @@ class CarouselSlider extends React.Component {
                       <ArrowForwardIosIcon />
                   </Button> */}
 
-
-                <Fragment>
-                  <Slider ref={(c) => (this.slider = c)} {...settings}>
-                    {card}
-                  </Slider>
-                </Fragment>
-  
+          <Fragment>
+            <Slider ref={(c) => (this.slider = c)} {...settings}>
+              {card}
+            </Slider>
+          </Fragment>
         </Box>
       </Fragment>
     );

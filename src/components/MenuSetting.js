@@ -34,7 +34,7 @@ export default function MenuSettings() {
     setExpanded(isExpanded ? panel : false);
   };
   return (
-    <Paper sx={{ width: 320, maxWidth: "100%" }}>
+    <Paper sx={{ width: 320 }}>
       <MenuList>
         <Accordion
           expanded={expanded === "panel1"}
@@ -95,7 +95,6 @@ export default function MenuSettings() {
           </Typography>
         </MenuItem>
 
-      
         <Accordion
           expanded={expanded === "panel2"}
           onChange={handleChange("panel2")}
@@ -116,10 +115,10 @@ export default function MenuSettings() {
             <Typography>
               <MenuItem style={{ whiteSpace: "normal" }}>
                 <Box>
-                     <Box component="h6" className="meneText">
-                        Chat response on result page
-                      </Box>
-                  
+                  <Box component="h6" className="meneText">
+                    Chat response on result page
+                  </Box>
+
                   <Box component="p" className="meneText">
                     Choose how often do you want to see chat responses on the
                     search result page.
@@ -160,14 +159,14 @@ export default function MenuSettings() {
           <ListItemIcon>
             <PersonIcon />
           </ListItemIcon>
-          <ListItemText  className="menuText">My Bing</ListItemText>
+          <ListItemText className="menuText">My Bing</ListItemText>
         </MenuItem>
 
         <MenuItem>
           <ListItemIcon>
             <PrivacyTipIcon />
           </ListItemIcon>
-          <ListItemText  className="menuText">Privacy</ListItemText>
+          <ListItemText className="menuText">Privacy</ListItemText>
         </MenuItem>
 
         <MenuItem>
@@ -189,7 +188,7 @@ export default function MenuSettings() {
             aria-controls="panel3bh-content"
             id="panel3bh-header"
           >
-            <Typography  className="menuText">
+            <Typography className="menuText">
               <ListItemIcon>
                 <HomeIcon fontSize="small" />
               </ListItemIcon>
@@ -224,18 +223,31 @@ export default function MenuSettings() {
 
         <Divider />
         <Box className={styles.siteLinks}>
-          <Link to="/" className={styles.link}>Privacy and Cookie</Link> <span className={styles.dot}></span>
-          <Link to="/" className={styles.link}>Legal</Link> <span className={styles.dot}></span>
-          <Link to="/" className={styles.link}>Advertise</Link> <span className={styles.dot}></span>
-          <Link to="/" className={styles.link}>About our ads</Link> <span className={styles.dot}></span>
-          <Link to="/" className={styles.link}>Help</Link>
-          
-          <Box className={styles.copyright} component="p">&#169; 2023 Microsoft</Box>
-
+          <Link to="/" className={styles.link}>
+            Privacy and Cookie
+          </Link>{" "}
+          <span className={styles.dot}></span>
+          <Link to="/" className={styles.link}>
+            Legal
+          </Link>{" "}
+          <span className={styles.dot}></span>
+          <Link to="/" className={styles.link}>
+            Advertise
+          </Link>{" "}
+          <span className={styles.dot}></span>
+          <Link to="/" className={styles.link}>
+            About our ads
+          </Link>{" "}
+          <span className={styles.dot}></span>
+          <Link to="/" className={styles.link}>
+            Help
+          </Link>
+          <Box className={styles.copyright} component="p">
+            &#169; 2023 Microsoft
+          </Box>
         </Box>
-
-      
       </MenuList>
     </Paper>
+
   );
 }
